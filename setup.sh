@@ -11,10 +11,14 @@ if [[ ! -f ~/.vim/autoload/plug.vim ]]; then
 fi
 
 
-
-
 if [[ ! -f ~/.vimrc ]]; then
     ln -s ~/.dotfiles/vimrc ~/.vimrc
 fi
 
 
+# Install FZF
+if [[ ! -f ~/.fzf.bash ]]; then
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    echo "Installing FZF"
+    ~/.fzf/install
+fi

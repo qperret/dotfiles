@@ -1,0 +1,60 @@
+# Identity
+source ~/.muttrc.local
+
+
+# IMAP stuffs
+set move = no
+set imap_check_subscribed="yes"
+set imap_list_subscribed="yes"
+
+# SMTP / SSL
+set ssl_starttls=yes
+set ssl_force_tls=yes
+
+
+# Google contacts
+set query_command="goobook query '%s'"
+bind editor <Tab> complete-query
+
+# Files / directories
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+set record="" # Don't keep "~/sent" file
+
+# Locale
+set locale="fr_FR"
+set date_format="%A %d %b %Y à %H:%M:%S (%Z)"
+set attribution="Le %d, %n à écrit:"
+set forward_format="[Fwd: %s]"
+set forward_quote
+
+# Recent mails on top
+set sort = reverse-date-received       
+set sort=threads
+set sort_browser=reverse-date
+set sort_aux=reverse-last-date-received
+
+# Links for html
+auto_view text/x-vcard text/html text/enriched
+#auto_view text/html
+
+# Control-B to browse URLs in emails
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+# Bind up down
+bind pager <up> previous-line 
+bind pager <down> next-line
+set sleep_time = 0 # be fast
+
+# Set up vim
+set editor="vim -c 'set spell spelllang=en'"
+
+# Colors
+source ~/.mutt/colors.mine
+
+# Get passwords
+source "gpg2 -d ~/.muttpass.gpg |"
+
+

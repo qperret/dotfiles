@@ -15,6 +15,11 @@ if [[ ! -f ~/.vimrc ]]; then
     ln -s ~/.dotfiles/vimrc ~/.vimrc
 fi
 
+if [[ ! -d ~/.mutt ]]; then
+    mkdir ~/.mutt
+    ln -s ~/.dotfiles/mutt/muttrc ~/.mutt/muttrc
+    ln -s ~/.dotfiles/mutt/colors.mine ~/.mutt/colors.mine
+fi
 
 # Install FZF
 if [[ ! -f ~/.fzf.bash ]]; then

@@ -1,6 +1,19 @@
 # Identity
 source ~/.muttrc.local
-
+# [muttrc.local - example of GMail account]
+#   # Identity
+#   set hostname=gmail.com
+#   set from = "foo.bar@gmail.com"
+#   set realname = "Foo Bar"
+#   set smtp_url = "smtps://foo.bar@smtp.gmail.com:465"
+#   set imap_user = "foo.bar@gmail.com"
+#   set spoolfile = imaps://imap.gmail.com:993/INBOX
+#   set folder = "imaps://imap.gmail.com:993"
+#  
+#   # GMail specifics
+#   set postponed="+[Gmail]/Brouillons"
+#   bind editor <space> noop
+#   macro index,pager a "<save-message>=[Gmail]/Tous les messages<enter>" "Archive" 
 
 # IMAP stuffs
 set move = no
@@ -24,8 +37,8 @@ set record="" # Don't keep "~/sent" file
 
 # Locale
 set locale="fr_FR"
-set date_format="%A %d %b %Y à %H:%M:%S (%Z)"
-set attribution="Le %d, %n à écrit:"
+set date_format="%A %d %b %Y at %H:%M:%S (%Z)"
+set attribution="On %d, %n wrote:"
 set forward_format="[Fwd: %s]"
 set forward_quote
 
@@ -54,7 +67,18 @@ set editor="vim -c 'set spell spelllang=en'"
 # Colors
 source ~/.mutt/colors.mine
 
-# Get passwords
+# Decrypt password
 source "gpg2 -d ~/.muttpass.gpg |"
-
+# [ Password file creation ]
+#   # Create raw password lile
+#   touch ~/.muttpass
+#   echo 'set smtp_pass="password"' >> ~/.muttpass
+#   echo 'set imap_pass="password"' >> ~/.muttpass
+#
+#   # Create .muttpass.gpg
+#   gpg -r your.email@example.com -e ~/.muttpass
+#
+#   # Clean raw file
+#   shred ~/.muttpass
+#   rm ~/.muttpass
 

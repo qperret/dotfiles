@@ -17,6 +17,9 @@ set tabstop=4           " number of visual spaces per TAB
 set shiftwidth=4        " when indenting with '>', use 4 spaces width
 set expandtab           " tabs are spaces (good for python)
 
+" Tabs and spaces for C/H files
+autocmd BufRead,BufNewFile   *.c,*.h,*.cpp,*.hpp set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+
 " Search
 set ignorecase
 set smartcase
@@ -73,6 +76,13 @@ set t_Co=256
 colorscheme badwolf
 " set background=dark
 
+if &diff
+    colorscheme pablo
+    set background=dark
+endif
+
+
+
 " Airline
 let g:airline_theme='afterglow'
 let g:airline_left_sep=''
@@ -81,7 +91,10 @@ let g:airline_right_sep=''
 syntax on
 " Higlight 80th column
 set colorcolumn=80
-hi ColorColumn   cterm=NONE ctermbg=234 ctermfg=NONE     
+hi ColorColumn   cterm=NONE ctermbg=234 ctermfg=NONE
+
+" Highlight search match
+set hlsearch
 
 " Resize vsplit on window resize
 autocmd VimResized * exe "normal! \<c-w>="

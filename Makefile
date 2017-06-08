@@ -3,10 +3,12 @@ vimplug=~/.vim/autoload/plug.vim
 vimrc=~/.vimrc
 mutt=~/.mutt
 fzf=~/.fzf.bash
+fira-font=~/.fonts/FiraSans-Book.ttf
 
-all: ${vimplug} ${vimrc} ${mutt} ${fzf}
+all: ${vimplug} ${vimrc} ${mutt} ${fzf} ${fira-font}
 
 ${vimplug}:
+	@echo "Installing Vim-plug ..."
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@echo "Please run :PlugInstall in ViM to install all the plugins"
@@ -30,3 +32,9 @@ ${fzf}:
 	@echo "Installing FZF"
 	~/.fzf/install
 
+${fira-font}:
+	@echo "Installing Fira fonts ..."
+	mkdir -p ~/.fonts
+	@svn co https://github.com/mozilla/Fira.git/trunk/ttf ~/.fonts
+	@echo "Updating font cache ..."
+	sudo fc-cache -f

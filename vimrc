@@ -4,8 +4,6 @@ set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
 set showmatch           " highlight matching [({})]
 set laststatus=2        " always display status line
-
-" Colors
 set nocompatible        " Entering in vim mode, not plain vi
 
 " Filetype plugins
@@ -44,8 +42,18 @@ inoremap <F7> <Esc>:tabprevious<CR>i
 inoremap <F8> <Esc>:tabnext<CR>i
 inoremap <F6> <Esc>:tabnew<CR>
 
+" Toogle paste mode to avoid re-indenting
+set pastetoggle=<F10>
+
 " CDC = Change to Directory of Current file
 command CDC lcd %:p:h
+
+" // to search next occurence of currently highlighted stuff
+vnoremap // y/\V<C-R>"<CR>
+
+" Clear highlighting on escape in normal mode
+" nnoremap <esc> :noh<return><esc>
+" nnoremap <esc>^[ <esc>^[
 
 " Plugins - managed with vim-plug
 call plug#begin('~/.vim/plugged')
@@ -53,6 +61,12 @@ call plug#begin('~/.vim/plugged')
 " FZF
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 " Plug 'junegunn/fzf.vim'
+
+" Ctags
+Plug  'craigemery/vim-autotag'
+
+" Fugitive
+Plug 'tpope/vim-fugitive'
 
 " NerdTREE
 Plug 'scrooloose/nerdtree'
@@ -69,19 +83,14 @@ Plug 'danilo-augusto/vim-afterglow'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
+Plug 'romainl/Apprentice'
+Plug 'nielsmadan/harlequin'
 call plug#end()
 
 " Color scheme
 set t_Co=256
 colorscheme badwolf
 " set background=dark
-
-if &diff
-    colorscheme pablo
-    set background=dark
-endif
-
-
 
 " Airline
 let g:airline_theme='afterglow'
@@ -91,10 +100,17 @@ let g:airline_right_sep=''
 syntax on
 " Higlight 80th column
 set colorcolumn=80
-hi ColorColumn   cterm=NONE ctermbg=234 ctermfg=NONE
+hi ColorColumn cterm=NONE ctermbg=234 ctermfg=NONE
 
 " Highlight search match
 set hlsearch
 
+" Ctags
+set tags=.tags;/
+let g:autotagTagsFile='.tags'
+nnoremap <C-l> <C-]>
+nnoremap <C-o> <C-t>
+
 " Resize vsplit on window resize
 autocmd VimResized * exe "normal! \<c-w>="
+

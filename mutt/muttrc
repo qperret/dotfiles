@@ -1,4 +1,71 @@
-# Identity
+# IMAP stuffs
+set move = no
+set imap_check_subscribed="yes"
+set imap_list_subscribed="yes"
+set imap_idle
+set imap_keepalive=180
+unset mark_old
+set timeout=15
+set mail_check=90
+
+# SMTP / SSL
+set ssl_starttls=yes
+set ssl_use_sslv3=yes
+set ssl_force_tls=yes
+
+# Files / directories
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+set record="" # Don't keep "~/sent" file
+
+# Locale
+#set locale="fr_FR"
+set date_format="%A %d %b %Y at %H:%M:%S (%Z)"
+set attribution="On %d, %n wrote:"
+set forward_format="[Fwd: %s]"
+set forward_quote
+
+# Recent mails on top
+set sort = reverse-date-received       
+set sort=threads
+set sort_browser=reverse-date
+set sort_aux=reverse-last-date-received
+
+# Avoid asking "Press key to continue"
+set wait_key = no
+
+# Show sidebar
+set sidebar_visible
+#set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_format = "%B%?F? ?%* %?N?%N/?%S"
+set mail_check_stats
+bind index,pager \cp sidebar-prev       # Ctrl-Shift-P - Previous Mailbox
+bind index,pager \cn sidebar-next       # Ctrl-Shift-N - Next Mailbox
+bind index,pager \co sidebar-open       # Ctrl-Shift-O - Open Highlighted Mailbox
+
+# Links for html
+auto_view text/x-vcard text/html text/enriched
+#auto_view text/html
+
+# Control-B to browse URLs in emails
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+# Bind up down
+bind pager <up> previous-line 
+bind pager <down> next-line
+#bind pager gg top
+#bind index gg first-entry
+#bind pager G bottom
+#bind index G last-entry
+set sleep_time = 0 # be fast
+
+# Set up vim
+set editor="vim -c 'set spell spelllang=en'"
+
+
+# Identity + Local stuff
 source ~/.muttrc.local
 # [muttrc.local - example of GMail account]
 #   # Identity
@@ -15,70 +82,20 @@ source ~/.muttrc.local
 #   bind editor <space> noop
 #   macro index,pager a "<save-message>=[Gmail]/Tous les messages<enter>" "Archive" 
 
-# IMAP stuffs
-set move = no
-set imap_check_subscribed="yes"
-set imap_list_subscribed="yes"
-
-# SMTP / SSL
-set ssl_starttls=yes
-set ssl_force_tls=yes
-
-
-# Google contacts
-set query_command="goobook query '%s'"
-bind editor <Tab> complete-query
-
-# Files / directories
-set header_cache = "~/.mutt/cache/headers"
-set message_cachedir = "~/.mutt/cache/bodies"
-set certificate_file = "~/.mutt/certificates"
-set record="" # Don't keep "~/sent" file
-
-# Locale
-set locale="fr_FR"
-set date_format="%A %d %b %Y at %H:%M:%S (%Z)"
-set attribution="On %d, %n wrote:"
-set forward_format="[Fwd: %s]"
-set forward_quote
-
-# Recent mails on top
-set sort = reverse-date-received       
-set sort=threads
-set sort_browser=reverse-date
-set sort_aux=reverse-last-date-received
-
-# Links for html
-auto_view text/x-vcard text/html text/enriched
-#auto_view text/html
-
-# Control-B to browse URLs in emails
-macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-
-# Bind up down
-bind pager <up> previous-line 
-bind pager <down> next-line
-set sleep_time = 0 # be fast
-
-# Set up vim
-set editor="vim -c 'set spell spelllang=en'"
-
 # Colors
-source ~/.mutt/colors.mine
-
-# Decrypt password
-source "gpg2 -d ~/.muttpass.gpg |"
-# [ Password file creation ]
-#   # Create raw password lile
-#   touch ~/.muttpass
-#   echo 'set smtp_pass="password"' >> ~/.muttpass
-#   echo 'set imap_pass="password"' >> ~/.muttpass
-#
-#   # Create .muttpass.gpg
-#   gpg -r your.email@example.com -e ~/.muttpass
-#
-#   # Clean raw file
-#   shred ~/.muttpass
-#   rm ~/.muttpass
+color hdrdefault blue black
+color quoted blue black
+color signature blue black
+color attachment red black
+color message white black
+color error white black
+color indicator white blue
+color status black white
+color tree white black
+color normal white black
+color markers white black
+color search white black
+color tilde brightmagenta black
+color index blue black ~F
+color index red black "~N|~O"
 

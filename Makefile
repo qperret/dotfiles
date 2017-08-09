@@ -4,8 +4,9 @@ vimrc=~/.vimrc
 mutt=~/.mutt
 fzf=~/.fzf.bash
 fira-font=~/.fonts/FiraSans-Book.ttf
+xdefaults=~/.Xdefaults
 
-all: ${vimplug} ${vimrc} ${mutt} ${fzf} ${fira-font}
+all: ${vimplug} ${vimrc} ${mutt} ${fzf} ${fira-font} ${xdefaults}
 
 ${vimplug}:
 	@echo "Installing Vim-plug ..."
@@ -23,7 +24,6 @@ ${mutt}:
 	ln -s ~/.dotfiles/mutt/muttrc ~/.mutt/muttrc
 	ln -s ~/.dotfiles/mutt/colors.mine ~/.mutt/colors.mine
 	@echo "Mutt needs ~/.muttrc.local with identity settings"
-	@echo "with the GPG encrypted password"
 	@echo "Press enter to continue"
 	@read a
 
@@ -38,3 +38,7 @@ ${fira-font}:
 	@svn co https://github.com/mozilla/Fira.git/trunk/ttf ~/.fonts
 	@echo "Updating font cache ..."
 	sudo fc-cache -f
+
+${xdefaults}:
+	@echo "Setting up Xdefaults"
+	ln -s ~/.dotfiles/Xdefaults ${xdefaults}

@@ -1,5 +1,0 @@
-# -*-muttrc-*-
-
-# Palette for use with the Linux console.  Black background.
-# color body brightwhite black '\*+[^*]+\*+'
-# color body brightwhite black '_+[^_]+_+'

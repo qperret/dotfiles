@@ -10,17 +10,26 @@ Xft.hinting:    1
 Xft.hintstyle:  hintlight
 
 ! Urxvt
+! # SCROLL
 URxvt*scrollBar: false
-URxvt*font: xft:Fira Mono:pixelsize=12,xft:Inconsolata:pixelsize:13,xft:Ubuntu Mono:pixelsize=13,xft:DejaVu Sans Mono:pixelsize=13,xft:Droid Sans Mono:pixelsize=13
-URxvt*letterSpace: -2
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
 URxvt.saveLines: 1000000
+
 URxvt*inheritPixmap: true
 URxvt.urlLauncher: chromium-brower
 URxvt.imLocale: en_GB.utf8
-URxvt*transparent: 0
 
-URxvt.keysym.Shift-Up: command:\033]720;1\007
-URxvt.keysym.Shift-Down: command:\033]721;1\007
+! # VISU
+URxvt*font: xft:Fira Mono:pixelsize=12,xft:Inconsolata:pixelsize:13,xft:Ubuntu Mono:pixelsize=13,xft:DejaVu Sans Mono:pixelsize=13,xft:Droid Sans Mono:pixelsize=13
+URxvt*letterSpace: -2
+URxvt*transparent: 0
 
 URxvt.color0: rgb:00/00/00
 URxvt.color1: rgb:CC/00/00

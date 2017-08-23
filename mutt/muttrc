@@ -64,7 +64,6 @@ set sleep_time = 0 # be fast
 # Set up vim
 set editor="vim -c 'set spell spelllang=en'"
 
-
 # Identity + Local stuff
 source ~/.muttrc.local
 # [muttrc.local - example of GMail account]
@@ -83,19 +82,54 @@ source ~/.muttrc.local
 #   macro index,pager a "<save-message>=[Gmail]/Tous les messages<enter>" "Archive" 
 
 # Colors
-color hdrdefault blue black
-color quoted blue black
-color signature blue black
-color attachment red black
-color message white black
-color error white black
-color indicator white blue
+color hdrdefault blue default
+color quoted blue default
+color signature blue default
+color attachment red default
+color message default default
+color error red default
+color indicator default blue
 color status black white
-color tree white black
-color normal white black
-color markers white black
-color search white black
-color tilde brightmagenta black
-color index blue black ~F
-color index red black "~N|~O"
+color tree default default
+color normal default default
+color markers default default
+color search default default
+color tilde brightmagenta default
+color index blue default ~F
+color index red default "~N|~O"
+color   normal  white default 
+
+# Patch syntax highlighting
+color   body    white           default         ^[[:space:]].*                  
+color   body    yellow          default         ^(diff).*                       
+#color   body    white           default         ^[\-\-\-].*                     
+#color   body    white           default         ^[\+\+\+].*                     
+#color   body    green           default         ^[\+].*                         
+#color   body    red             default         ^[\-].*                         
+#color   body    brightblue      default         [@@].*                          
+color   body    white           default         ^(\s).*                         
+color   body    cyan            default         ^(Signed-off-by).*
+color   body    cyan            default         ^(Docker-DCO-1.1-Signed-off-by).*
+color   body    white           default         ^(Cc)
+color   body    brightyellow    default         "^diff \-.*"
+color   body    white           default         "^index [a-f0-9].*"
+color   body    blue            default         "^---$"
+color   body    white           default         "^\-\-\- .*"
+color   body    white           default         "^[\+]{3} .*"
+color   body    green           default         "^[\+][^\+]+.*"
+color   body    red             default         "^\-[^\-]+.*"
+color   body    brightblue      default         "^@@ .*"
+color   body    green           default         "LGTM"
+color   body    magenta         default         "-- Commit Summary --"
+color   body    magenta         default         "-- File Changes --"
+color   body    magenta         default         "-- Patch Links --"
+color   body    green           default         "^Merged #.*"
+color   body    red             default         "^Closed #.*"
+color   body    blue            default         "^Reply to this email.*"
+
+
+
+
+
+
 

@@ -68,6 +68,9 @@ Plug  'craigemery/vim-autotag'
 " Fugitive
 Plug 'tpope/vim-fugitive'
 
+" CtrlP
+Plug 'ctrlpvim/ctrlp.vim'
+
 " NerdTREE
 Plug 'scrooloose/nerdtree'
 

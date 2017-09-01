@@ -113,6 +113,7 @@ set tags=.tags;/
 let g:autotagTagsFile='.tags'
 nnoremap <C-l> <C-]>
 nnoremap <C-o> <C-t>
+nnoremap <C-m> :tabnew %<CR><C-]>
 
 " Resize vsplit on window resize
 autocmd VimResized * exe "normal! \<c-w>="

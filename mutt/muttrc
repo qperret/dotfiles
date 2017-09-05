@@ -67,16 +67,16 @@ bind pager                  gg  top
 bind pager                  G   bottom
 bind index                  gg  first-entry
 bind index                  G   last-entry
+bind generic,index          <down>   next-entry
+bind generic,index          <up>   previous-entry
+bind pager                  <down>   next-line
+bind pager                  <up>   previous-line
 
 # Message response
 bind index,pager            f   forward-message
 bind index,pager            r   group-reply # to all recipients by default
 bind index,pager            R   reply # to sender only
 
-#bind pager gg top
-#bind index gg first-entry
-#bind pager G bottom
-#bind index G last-entry
 set sleep_time = 0 # be fast
 
 # Set up vim

@@ -76,15 +76,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Color schemes
-Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
-Plug 'vim-scripts/wombat256.vim'
 Plug 'danilo-augusto/vim-afterglow'
-Plug 'gosukiwi/vim-atom-dark'
-Plug 'altercation/vim-colors-solarized'
-Plug 'chriskempson/base16-vim'
-Plug 'romainl/Apprentice'
-Plug 'nielsmadan/harlequin'
 call plug#end()
 
 " Color scheme

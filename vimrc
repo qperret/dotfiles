@@ -15,8 +15,8 @@ set tabstop=4           " number of visual spaces per TAB
 set shiftwidth=4        " when indenting with '>', use 4 spaces width
 set expandtab           " tabs are spaces (good for python)
 
-" Tabs and spaces for C/H files
-autocmd BufRead,BufNewFile   *.c,*.h,*.cpp,*.hpp set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+" Tabs and spaces for C/C++/H/H++/DT files
+autocmd BufRead,BufNewFile   *.c,*.h,*.cpp,*.hpp,*.dts,*.dtsi set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 
 " Search
 set ignorecase

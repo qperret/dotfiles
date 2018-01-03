@@ -135,6 +135,9 @@ color   body        cyan            default          ^(Cc).*
 color   body        cyan            default          ^(CC).*
 color   body        brightyellow    default         "^diff \-.*"
 color   body        color243        default         "^>.*"
+color   body        color243        default         "^>.>.*"
+color   body        color243        default         "^>.>.>.*"
+color   body        color243        default         "^>.>.>.>.*"
 color   body        white           default         "^index [a-f0-9].*"
 color   body        blue            default         "^---$"
 color   body        white           default         "^\-\-\- .*"

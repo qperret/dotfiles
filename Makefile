@@ -5,8 +5,9 @@ mutt=~/.mutt
 fzf=~/.fzf.bash
 fira-font=~/.fonts/FiraSans-Book.ttf
 xdefaults=~/.Xdefaults
+i3config=~/.i3/config
 
-all: ${vimplug} ${vimrc} ${mutt} ${fzf} ${fira-font} ${xdefaults}
+all: ${vimplug} ${vimrc} ${mutt} ${fzf} ${fira-font} ${xdefaults} ${i3config}
 
 ${vimplug}:
 	@echo "Installing Vim-plug ..."
@@ -42,3 +43,6 @@ ${fira-font}:
 ${xdefaults}:
 	@echo "Setting up Xdefaults"
 	ln -s ~/.dotfiles/Xdefaults ${xdefaults}
+
+${i3config}:
+	ln -s ~/.dotfiles/i3 ~/.i3

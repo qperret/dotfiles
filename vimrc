@@ -27,6 +27,10 @@ au BufNewFile,BufRead *.py
     \ set autoindent
     \ set fileformat=unix
 
+" Flag unnecessary whitespaces
+:highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
 " Search
 set ignorecase
 set smartcase

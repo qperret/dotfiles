@@ -5,18 +5,27 @@ set cursorline          " highlight current line
 set showmatch           " highlight matching [({})]
 set laststatus=2        " always display status line
 set nocompatible        " Entering in vim mode, not plain vi
+set encoding=utf-8
 
 " Filetype plugins
 filetype plugin on
 filetype indent on
 
-" Tabs and spaces
-set tabstop=4           " number of visual spaces per TAB
-set shiftwidth=4        " when indenting with '>', use 4 spaces width
-set expandtab           " tabs are spaces (good for python)
+" Default tabs and spaces - Linux Kernel style
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+set noexpandtab
 
-" Tabs and spaces for C/C++/H/H++/DT files
-autocmd BufRead,BufNewFile   *.c,*.h,*.cpp,*.hpp,*.dts,*.dtsi set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+" Tabs and spaces for Python
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
 
 " Search
 set ignorecase

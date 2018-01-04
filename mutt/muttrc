@@ -27,10 +27,20 @@ set forward_format="[Fwd: %s]"
 set forward_quote
 
 # Recent mails on top
-set sort = reverse-date-received       
+set sort = reverse-date-received
 set sort=threads
 set sort_browser=reverse-date
 set sort_aux=reverse-last-date-received
+
+# Header
+ignore *
+unignore from date subject to cc
+unignore x-mailer
+unignore message-id
+bind index     H   "display-toggle-weed"
+bind pager     H   "display-toggle-weed"
+bind attach    H   "display-toggle-weed"
+bind compose   H   "display-toggle-weed"
 
 # Avoid asking "Press key to continue"
 set wait_key = no

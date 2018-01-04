@@ -13,6 +13,13 @@ set ssl_starttls=yes
 set ssl_use_sslv3=yes
 set ssl_force_tls=yes
 
+# Misc
+set use_from = yes
+set charset = UTF-8
+set send_charset="us-ascii:utf-8"
+set wait_key = no
+set allow_ansi
+
 # Files / directories
 set header_cache = "~/.mutt/cache/headers"
 set message_cachedir = "~/.mutt/cache/bodies"
@@ -42,9 +49,6 @@ bind pager     H   "display-toggle-weed"
 bind attach    H   "display-toggle-weed"
 bind compose   H   "display-toggle-weed"
 
-# Avoid asking "Press key to continue"
-set wait_key = no
-
 # Show sidebar
 set sidebar_visible
 #set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
@@ -56,7 +60,6 @@ bind index,pager \co sidebar-open       # Ctrl-Shift-O - Open Highlighted Mailbo
 
 # Links for html
 auto_view text/x-vcard text/html text/enriched
-#auto_view text/html
 
 # Control-B to browse URLs in emails
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
@@ -98,6 +101,9 @@ set editor="vim -c 'set spell spelllang=en'"
 macro index \Ch "<enter-command>unset wait_key<enter><enter-command>set pipe_decode<enter><tag-prefix><pipe-entry>from-mutt.sh<enter><enter-command>unset pipe_decode<enter><enter-command>set wait_key<enter>" "output git patches"
 set pipe_split=yes
 
+macro index \CR \
+    "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" \
+    "mark all new as read"
 
 # Identity + Local stuff
 source ~/.muttrc.local

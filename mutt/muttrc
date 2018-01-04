@@ -101,7 +101,7 @@ set pipe_split=yes
 
 # Identity + Local stuff
 source ~/.muttrc.local
-# [muttrc.local -iexample of GMail account]
+# [muttrc.local - example of GMail account]
 #   # Identity
 #   set hostname=gmail.com
 #   set from = "foo.bar@gmail.com"
@@ -110,11 +110,11 @@ source ~/.muttrc.local
 #   set imap_user = "foo.bar@gmail.com"
 #   set spoolfile = imaps://imap.gmail.com:993/INBOX
 #   set folder = "imaps://imap.gmail.com:993"
-#  
+#
 #   # GMail specifics
 #   set postponed="+[Gmail]/Brouillons"
 #   bind editor <space> noop
-#   macro index,pager a "<save-message>=[Gmail]/Tous les messages<enter>" "Archive" 
+#   macro index,pager a "<save-message>=[Gmail]/Tous les messages<enter>" "Archive"
 
 # Colors
 color hdrdefault    blue            default
@@ -132,14 +132,14 @@ color search        brightwhite     green
 color tilde         brightmagenta   default
 color index         blue            default         ~F
 color index         red             default         "~N|~O"
-color normal        white           default 
+color normal        white           default
 
 # Patch syntax highlighting
-#color   body        white           default 
-color   body        white           default         ^[[:space:]].*                  
-color   body        brightyellow    default         ^(diff\ ).*                       
-color   body        green           default         ^[\+].*                         
-color   body        red             default         ^[\-].*                         
+#color   body        white           default
+color   body        white           default         ^[[:space:]].*
+color   body        brightyellow    default         ^(diff\ ).*
+color   body        green           default         ^[\+].*
+color   body        red             default         ^[\-].*
 color   body        cyan            default         ^(Signed-off-by).*
 color   body        cyan            default          ^(Cc).*
 color   body        cyan            default          ^(CC).*

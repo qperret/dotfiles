@@ -77,8 +77,10 @@ bind index,pager            l   next-thread
 bind index,pager            h   previous-thread
 bind generic,index,pager    J   next-entry
 bind generic,index,pager    K   previous-entry
+bind pager                  g   noop
 bind pager                  gg  top
 bind pager                  G   bottom
+bind index                  g   noop
 bind index                  gg  first-entry
 bind index                  G   last-entry
 bind generic,index          <down>   next-entry

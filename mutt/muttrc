@@ -57,6 +57,7 @@ set mail_check_stats
 bind index,pager \cp sidebar-prev       # Ctrl-Shift-P - Previous Mailbox
 bind index,pager \cn sidebar-next       # Ctrl-Shift-N - Next Mailbox
 bind index,pager \co sidebar-open       # Ctrl-Shift-O - Open Highlighted Mailbox
+bind index,pager B sidebar-toggle-visible
 
 # Links for html
 auto_view text/x-vcard text/html text/enriched

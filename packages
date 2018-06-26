@@ -1,0 +1,14 @@
+i3
+make
+git
+subversion
+curl
+rxvt-unicode
+chromium-browser
+neomutt
+pcmanfm
+lxappearance
+brightnessctl
+pasystray
+pavucontrol
+build-essential

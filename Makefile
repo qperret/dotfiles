@@ -22,6 +22,7 @@ ${vimrc}:
 
 ${mutt}:
 	mkdir ~/.mutt
+	mkdir ~/.mutt/cache
 	ln -s ~/.dotfiles/mutt/muttrc ~/.mutt/muttrc
 	ln -s ~/.dotfiles/mutt/colors.mine ~/.mutt/colors.mine
 	@echo "Mutt needs ~/.muttrc.local with identity settings"

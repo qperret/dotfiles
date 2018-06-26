@@ -20,6 +20,9 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 # STARTUP
 exec --no-startup-id setxkbmap fr           # French keyboard
 exec --no-startup-id xset r rate 250 60     # Go faster
+exec --no-startup-id nm-applet
+exec --no-startup-id pasystray
+
 
 # DECORATION
 font pango:Fira Mono Bold 10

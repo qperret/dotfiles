@@ -22,7 +22,7 @@ URxvt.keysym.Shift-Up: command:\033]720;1\007
 URxvt.keysym.Shift-Down: command:\033]721;1\007
 URxvt.saveLines: 1000000
 
-URxvt*inheritPixmap: true
+URxvt*inheritPixmap: false
 URxvt.urlLauncher: chromium-brower
 URxvt.imLocale: en_GB.utf8
 
@@ -48,4 +48,3 @@ URxvt.color13: rgb:AD/7F/A8
 URxvt.color14: rgb:34/E2/E2
 URxvt.color15: rgb:EE/EE/EC
 URxvt.colorBD: rgb:ff/ff/ff
-

@@ -93,6 +93,18 @@ bind index,pager            f   forward-message
 bind index,pager            r   group-reply # to all recipients by default
 bind index,pager            R   reply # to sender only
 
+# Manage threads
+folder-hook . "exec collapse-all" # Start with all threads collapsed
+bind index <tab>      next-new-then-unread
+bind index <space>    collapse-thread
+bind index _          collapse-all
+
+# Keep index lines in pager
+set pager_index_lines = 8
+
+# Line by line scroll in pager
+set menu_scroll
+
 set sleep_time = 0 # be fast
 
 # Set up vim
@@ -142,6 +154,9 @@ color tilde         brightmagenta   default
 color index         blue            default         ~F
 color index         red             default         "~N|~O"
 color normal        white           default
+
+color index         yellow          default         "~v~(!~N)~(!~F)" # collapsed thread with no New or Flagged
+color index         brightmagenta   default         "~v~(~N)"        # collapsed thread with New
 
 # Patch syntax highlighting
 #color   body        white           default

@@ -99,6 +99,9 @@ bind index <tab>      next-new-then-unread
 bind index <space>    collapse-thread
 bind index _          collapse-all
 
+# Keep index lines in pager
+set pager_index_lines = 8
+
 set sleep_time = 0 # be fast
 
 # Set up vim

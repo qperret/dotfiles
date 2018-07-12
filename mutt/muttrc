@@ -102,6 +102,9 @@ bind index _          collapse-all
 # Keep index lines in pager
 set pager_index_lines = 8
 
+# Line by line scroll in pager
+set menu_scroll
+
 set sleep_time = 0 # be fast
 
 # Set up vim

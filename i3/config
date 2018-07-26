@@ -11,6 +11,8 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop    # start dmenu
 # AUDIO CONTROL
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pactl info | grep Sink | cut -d':' -f2) +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pactl info | grep Sink | cut -d':' -f2) -5%
+bindsym $mod+Mod2+KP_Add exec --no-startup-id pactl set-sink-volume $(pactl info | grep Sink | cut -d':' -f2) +5%
+bindsym $mod+Mod2+KP_Subtract exec --no-startup-id pactl set-sink-volume $(pactl info | grep Sink | cut -d':' -f2) -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # SCREEN BRIGHTNESS

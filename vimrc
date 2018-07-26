@@ -36,7 +36,7 @@ set ignorecase
 set smartcase
 
 " Mouse control
-set mouse=a
+set mouse=r
 
 " Word wrapping
 set wrap lbr

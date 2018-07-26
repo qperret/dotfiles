@@ -28,7 +28,7 @@ URxvt.imLocale: en_GB.utf8
 
 ! # VISU
 URxvt*font: xft:Fira Mono:pixelsize=12,xft:Inconsolata:pixelsize:13,xft:Ubuntu Mono:pixelsize=13,xft:DejaVu Sans Mono:pixelsize=13,xft:Droid Sans Mono:pixelsize=13
-URxvt*letterSpace: -2
+URxvt*letterSpace: -1
 URxvt*transparent: 0
 
 URxvt.color0: rgb:00/00/00

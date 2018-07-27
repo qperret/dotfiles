@@ -2,12 +2,14 @@
 vimplug=~/.vim/autoload/plug.vim
 vimrc=~/.vimrc
 mutt=~/.mutt
+mailcap=~/.mailcap
 fzf=~/.fzf.bash
 fira-font=~/.fonts/FiraSans-Book.ttf
 xdefaults=~/.Xdefaults
 i3config=~/.i3/config
 
-all: ${vimplug} ${vimrc} ${mutt} ${fzf} ${fira-font} ${xdefaults} ${i3config}
+all: ${vimplug} ${vimrc} ${mutt} ${mailcap} ${fzf} ${fira-font} ${xdefaults} \
+	${i3config}
 
 ${vimplug}:
 	@echo "Installing Vim-plug ..."
@@ -28,6 +30,9 @@ ${mutt}:
 	@echo "Mutt needs ~/.muttrc.local with identity settings"
 	@echo "Press enter to continue"
 	@read a
+
+${mailcap}:
+	ln -s ~/.dotfiles/mailcap ~/.mailcap
 
 ${fzf}:
 	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf

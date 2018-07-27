@@ -30,7 +30,7 @@ set record="" # Don't keep "~/sent" file
 #set locale="fr_FR"
 set date_format="%A %d %b %Y at %H:%M:%S (%Z)"
 set attribution="On %d, %n wrote:"
-set forward_format="[Fwd: %s]"
+set forward_format="Fwd: %s"
 set forward_quote
 
 # Recent mails on top

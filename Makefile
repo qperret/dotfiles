@@ -1,6 +1,7 @@
 
 vimplug=~/.vim/autoload/plug.vim
 vimrc=~/.vimrc
+gitconfig=~/.gitconfig
 mutt=~/.mutt
 mailcap=~/.mailcap
 fzf=~/.fzf.bash
@@ -9,7 +10,7 @@ xdefaults=~/.Xdefaults
 i3config=~/.i3/config
 
 all: ${vimplug} ${vimrc} ${mutt} ${mailcap} ${fzf} ${fira-font} ${xdefaults} \
-	${i3config}
+	${i3config} ${gitconfig}
 
 ${vimplug}:
 	@echo "Installing Vim-plug ..."
@@ -21,6 +22,12 @@ ${vimplug}:
 
 ${vimrc}:
 	ln -s ~/.dotfiles/vimrc ~/.vimrc
+
+${gitconfig}:
+	ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+	@echo "Git needs ~/.gitconfig.local with identity settings"
+	@echo "Press enter to continue"
+	@read a
 
 ${mutt}:
 	mkdir ~/.mutt

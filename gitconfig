@@ -1,0 +1,36 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	ll = log --oneline
+	one = show -s --pretty='format:%h (\"%s\")'
+	chp = cherry-pick
+	rbi = rebase -i
+	rbia = rebase -i --autosquash
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+[push]
+	default = simple
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.gitignore
+	abbrev = 12
+[http]
+	cookiefile = ~/.gitcookies
+
+# *** Example of .gitconfig.local ***
+#	[user]
+#		name = Firstname Lastname
+#		email = firstname.lastname@domain.com
+#	[gerrit]
+#		createChangeId = true
+#	[sendemail]
+#		smtpencryption = tls
+#		smtpserver = domain.com
+#		smtpuser = someuser
+#		smtpserverport = 587
+[include]
+	path = ~/.gitconfig.local

@@ -6,6 +6,7 @@ bindsym $mod+Return exec urxvt                          # start a terminal
 bindsym $mod+w exec chromium-browser                    # start a web browser
 bindsym $mod+b exec pcmanfm                             # Start file browser
 bindsym $mod+o exec i3lock -c 000000                    # Locks screen
+bindsym $mod+m exec urxvt -e mutt                       # Start mail client
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop    # start dmenu
 
 # AUDIO CONTROL

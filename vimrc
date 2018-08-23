@@ -89,7 +89,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Color schemes
-Plug 'sjl/badwolf'
+Plug 'qperret/badwolf'
 Plug 'danilo-augusto/vim-afterglow'
 call plug#end()
 

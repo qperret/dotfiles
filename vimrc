@@ -168,3 +168,13 @@ endif
 " Resize vsplit on window resize
 autocmd VimResized * exe "normal! \<c-w>="
 
+" GVim
+if has("gui_running")
+  set guifont=Fira\ Mono\ 9
+  set mouse=a
+  set guioptions-=m
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=e
+endif

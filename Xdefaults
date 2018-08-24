@@ -48,3 +48,23 @@ URxvt.color13: rgb:AD/7F/A8
 URxvt.color14: rgb:34/E2/E2
 URxvt.color15: rgb:EE/EE/EC
 URxvt.colorBD: rgb:ff/ff/ff
+
+! XTerm
+XTerm*font: xft:Fira Mono:pixelsize=12
+xterm*color0: rgb:00/00/00
+xterm*color1: rgb:CC/00/00
+xterm*color2: rgb:4E/9A/06
+xterm*color3: rgb:C4/A0/00
+xterm*color4: rgb:34/65/A4
+xterm*color5: rgb:75/50/7B
+xterm*color6: rgb:06/98/9A
+xterm*color7: rgb:D3/D7/CF
+xterm*color8: rgb:55/57/53
+xterm*color9: rgb:EF/29/29
+xterm*color10: rgb:8A/E2/34
+xterm*color11: rgb:FC/E9/4F
+xterm*color12: rgb:72/9F/CF
+xterm*color13: rgb:AD/7F/A8
+xterm*color14: rgb:34/E2/E2
+xterm*color15: rgb:EE/EE/EC
+xterm*colorBD: rgb:ff/ff/ff

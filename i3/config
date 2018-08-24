@@ -34,7 +34,7 @@ client.unfocused        #231F20 #231F20 #333333 #212121
 client.urgent           #2f343a #900000 #ffffff #900000
 
 bar {
-    status_command i3status -c ~/.i3/i3status.conf
+    status_command i3status -c ~/.config/i3/i3status.conf
     font pango:Fira Mono Medium 10
     position top
     colors {

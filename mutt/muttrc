@@ -53,6 +53,7 @@ bind compose   H   "display-toggle-weed"
 set sidebar_visible
 #set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set sidebar_format = "%B%?F? ?%* %?N?%N/?%S"
+set sidebar_width = 34
 set mail_check_stats
 bind index,pager \cp sidebar-prev       # Ctrl-Shift-P - Previous Mailbox
 bind index,pager \cn sidebar-next       # Ctrl-Shift-N - Next Mailbox

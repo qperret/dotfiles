@@ -4,10 +4,12 @@
 	st = status
 	br = branch
 	ll = log --oneline
+	lp = log -p
 	one = show -s --pretty='format:%h (\"%s\")'
 	chp = cherry-pick
 	rbi = rebase -i
 	rbia = rebase -i --autosquash
+	fix = commit --fixup
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p

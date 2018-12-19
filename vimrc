@@ -170,7 +170,7 @@ autocmd VimResized * exe "normal! \<c-w>="
 
 " GVim
 if has("gui_running")
-  set guifont=Fira\ Mono\ 9
+  set guifont=Fira\ Mono\ 10
   set mouse=a
   set guioptions-=m
   set guioptions-=T

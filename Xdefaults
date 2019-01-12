@@ -27,7 +27,7 @@ URxvt.urlLauncher: chromium-brower
 URxvt.imLocale: en_GB.utf8
 
 ! # VISU
-URxvt*font: xft:Fira Mono:pixelsize=12,xft:Inconsolata:pixelsize:13,xft:Ubuntu Mono:pixelsize=13,xft:DejaVu Sans Mono:pixelsize=13,xft:Droid Sans Mono:pixelsize=13
+URxvt*font: xft:Fira Mono:pixelsize=14,xft:Inconsolata:pixelsize:13,xft:Ubuntu Mono:pixelsize=13,xft:DejaVu Sans Mono:pixelsize=13,xft:Droid Sans Mono:pixelsize=13
 URxvt*letterSpace: -2
 URxvt*transparent: 0
 

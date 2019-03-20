@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # APPLICATIONS
-bindsym $mod+Return exec urxvt                          # start a terminal
+bindsym $mod+Return exec gnome-terminal                 # start a terminal
 bindsym $mod+w exec chromium-browser                    # start a web browser
 bindsym $mod+b exec pcmanfm                             # Start file browser
 bindsym $mod+o exec i3lock -c 000000                    # Locks screen

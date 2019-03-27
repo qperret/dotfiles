@@ -1,17 +1,6 @@
-i3
 make
 git
 subversion
 curl
-rxvt-unicode
-chromium-browser
-neomutt
-pcmanfm
-lxappearance
-brightnessctl
-pasystray
-pavucontrol
 build-essential
 lynx
-arc-theme
-papirus-icon-theme
